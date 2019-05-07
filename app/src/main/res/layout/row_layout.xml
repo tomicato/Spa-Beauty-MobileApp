@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout"
+        android:gravity="center">
+
+    <ImageView
+            android:id="@+id/imag_view"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:cropToPadding="false"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/image_desc"
+            android:layout_marginStart="10dp"/>
+    <LinearLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top|start"
+            android:minHeight="35dp"
+            android:padding="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical">
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:id="@+id/text_view_title"
+                  tools:text="@string/txt_title"
+                  android:textSize="14sp"
+                  android:fontFamily="sans-serif"
+                  android:textColor="@android:color/holo_purple"
+                  android:textAllCaps="true"
+                  android:gravity="center_vertical|center_horizontal"
+                  android:textStyle="bold"/>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal|center">
+            <TextView
+                    android:text="@string/text_stock"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:padding="5dp"
+                    android:textAllCaps="true"
+                    android:id="@+id/txt_stock"
+                    android:textSize="12sp"
+                    android:fontFamily="sans-serif" android:gravity="center"/>
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent">
+                <TextView
+                        android:text="@string/text_cont_price"
+                        android:layout_width="150dp"
+                        android:layout_height="35dp"
+                        android:id="@+id/txt_price"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif"
+                        android:textAllCaps="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/holo_red_light"
+                        android:gravity="left|center_vertical"
+                        tools:ignore="RtlHardcoded"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"/>
+                <ImageView android:layout_width="50dp"
+                           android:layout_height="wrap_content"
+                           android:layout_marginRight="20dp"
+                           android:layout_marginLeft="10dp"
+                           android:layout_marginTop="5dp"
+                           android:layout_marginBottom="5dp"
+                           android:src="@drawable/ic_shopping_cart"
+                           android:layout_alignParentRight="true"
+                           android:layout_alignParentEnd="true"
+                           android:layout_marginEnd="20dp"
+                           android:layout_marginStart="10dp"
+                           android:clickable="true"
+                           android:contentDescription="@string/buy"
+                           android:focusable="true"
+                           android:focusableInTouchMode="true"
+                           android:layout_alignParentBottom="false"
+                           android:layout_alignBottom="@+id/txt_price"
+                           android:id="@+id/img_cart"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

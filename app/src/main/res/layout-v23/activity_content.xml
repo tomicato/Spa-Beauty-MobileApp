@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+
+
+    <ImageView
+
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            android:id="@+id/img_content"
+            android:contentDescription="@string/imgContent"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical"
+            android:layout_marginEnd="10dp" tools:ignore="RtlHardcoded">
+        <TextView
+                android:text="@string/text_title"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_height="35dp"
+                android:id="@+id/txt_cont_title"
+                android:textAllCaps="true"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif"
+                android:textColor="@android:color/holo_purple"
+                android:textStyle="bold"
+                android:gravity="center"/>
+        <TextView
+                android:text="@string/text_cont_stock"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_height="35dp"
+                android:id="@+id/txt_cont_stock"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif"
+                android:textAllCaps="true"
+                android:gravity="center"/>
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="match_parent">
+            <TextView
+                    android:text="@string/text_cont_price"
+                    android:layout_width="150dp"
+                    android:layout_height="35dp"
+                    android:id="@+id/txt_cont_price"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif"
+                    android:textAllCaps="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/holo_red_light"
+                    android:gravity="left|center_vertical"
+                    tools:ignore="RtlHardcoded"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"/>
+            <ImageView android:layout_width="30dp"
+                       android:layout_height="40dp"
+                       android:contextClickable="true"
+                       android:src="@drawable/ic_shopping_cart"
+                       android:layout_alignParentEnd="true"
+                       android:layout_marginEnd="20dp"
+                       android:clickable="true"
+                       android:contentDescription="@string/buy"
+                       android:focusable="true"
+                       android:focusableInTouchMode="true"
+                       android:layout_alignParentBottom="false"
+                       android:layout_alignWithParentIfMissing="false"
+                       android:layout_centerVertical="true"
+                       android:layout_centerHorizontal="true"
+                       android:layout_alignParentRight="true"
+                       android:layout_marginRight="20dp"
+                       android:id="@+id/add_to_cart"
+                       android:onClick="addToCart"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="match_parent">
+
+            <EditText
+
+                    android:layout_width="36dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/_1"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:maxLines="1"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:layout_marginEnd="20dp"
+                    android:id="@+id/ed_qty"
+                    android:inputType="number"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp" tools:ignore="RtlHardcoded"/>
+
+            <TextView
+                    android:id="@+id/txt_qty"
+                    android:layout_width="163dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@id/view_qty"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/txt_qty"
+                    android:textSize="18sp"
+                    android:padding="5dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@id/view_qty"
+                    android:paddingLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginStart="120dp"
+                    android:paddingStart="20dp"
+                    tools:ignore="RtlHardcoded,RtlSymmetry"
+                    android:layout_marginEnd="10dp"/>
+
+        </RelativeLayout>
+    <TabHost
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tabHost">
+
+        <LinearLayout
+                android:id="@+id/linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <LinearLayout
+                        android:id="@+id/tab1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                    <TextView
+                            android:text="@string/text_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:padding="10dp"
+                            android:id="@+id/txt_content"
+                            android:fontFamily="sans-serif"
+                            android:textSize="14sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/tab2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/tab3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+</LinearLayout>
+</ScrollView>

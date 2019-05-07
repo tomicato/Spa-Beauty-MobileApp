@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="pro.comhelps.readdatajson">
+
+    <!-- Include following permission if you load images from Internet -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- Include following permission if you want to cache images on SD card -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+            android:allowBackup="false"
+            android:icon="@drawable/spa"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+        <activity
+                android:name=".activities.MainActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".activities.DisplayListView"
+                android:label="Парфюмерия"
+                android:parentActivityName=".activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.DisplayListView"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".activities.ContentActivity"
+                android:parentActivityName=".activities.MainActivity">
+        </activity>
+        <activity
+                android:name=".activities.LogActivity"
+                android:label="Личный кабинет"
+                android:parentActivityName=".activities.MainActivity">
+        </activity>
+        <activity
+                android:name=".activities.AccountActivity"
+                android:label="Ваши заказы"
+                android:parentActivityName=".activities.MainActivity">
+        </activity>
+        <activity
+                android:name=".activities.RegisterActivity"
+                android:label="Регистрация"
+                android:parentActivityName=".activities.MainActivity">
+        </activity>
+        <activity
+                android:name=".activities.CartActivity"
+                android:label="Ваша корзина"
+                android:parentActivityName=".activities.MainActivity">
+        </activity>
+        <activity
+                android:name=".activities.ProductsActivity"
+                android:label="Отложенные товары"
+                android:parentActivityName=".activities.MainActivity">
+        </activity>
+        <activity android:name=".orders.LoggedForm"
+                  android:label="Logged User"
+                  android:parentActivityName=".activities.ProductsActivity">
+        </activity>
+        <activity android:name=".orders.UnLoggedForm"
+                  android:label="UnLogged User"
+                  android:parentActivityName=".activities.ProductsActivity">
+        </activity>
+    </application>
+
+</manifest>
